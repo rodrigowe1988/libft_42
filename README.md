@@ -1,6 +1,7 @@
 # libft_42
-### Minha primeira biblioteca em C que estou desenvolvendo na 42 School SP
+## Minha primeira biblioteca em C que estou desenvolvendo na 42 School SP
 
+### Parte 1 - Funções básicas
 |Função()| Descrição|
 |:-------|:---------|
 |ft_atoi()| Essa função converte um caractere que possui um número em int.|
