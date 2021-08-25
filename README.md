@@ -1,5 +1,5 @@
 # libft_42
-### My first library in C, with functions that I will use in 42 course
+### Minha primeira biblioteca em C que estou desenvolvendo na 42 School SP
 
 |Função()| Descrição|
 |:-------|:---------|
