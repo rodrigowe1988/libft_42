@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -7,11 +6,4 @@ int	ft_isdigit(int c)
 		return (1);
 	else
 		return (0);
-}
-
-int main(void)
-{
-	char	c;
-	c = 'b';
-	printf("%d", ft_isdigit(c));
 }

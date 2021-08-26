@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_strlen(char c[])
 {
@@ -11,10 +10,4 @@ int ft_strlen(char c[])
 		c++;
 	}
 	return (count);
-}
-
-int main(void)
-{
-	char	qualquer[8] = "Rodrigo";
-	printf("%i", ft_strlen(qualquer));
 }

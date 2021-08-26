@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include "libft.h"
 
 /*primeiro parametro recebe a variável que será modificado
 * segundo, recebe o que será modificado
