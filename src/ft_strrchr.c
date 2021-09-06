@@ -9,7 +9,8 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == (char *) &s[i]);
+		if (s[i] == (char *) &s[i])
+			last_occurence = (char *)&s[i];
 		i++;
 	}
 	if ((char)c == s[i])
