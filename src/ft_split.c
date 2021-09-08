@@ -1,5 +1,8 @@
 #include "libft.h"
 
+#include <stdio.h>
+#include <string.h>
+
 static size_t	ft_countdown(const char *s, char c)
 {
 	int 	is_word;
@@ -81,6 +84,10 @@ char	**ft_split(const char *s, char c)
 		{
 			tab[counter] =  worddup(s, len);
 			if (tab[counter++] == NULL)
+				return (freesplit(tab, counter - 1));
 		}
+		s += len + 1;
 	}
+	tab[counter] = NULL;
+	return (tab);
 }
