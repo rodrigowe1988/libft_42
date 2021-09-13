@@ -57,7 +57,13 @@ clean:
 fclean:
 	rm -f ${NAME}
 
-re: fclean all
+re:		fclean all
+
+run: 	fclean all
+	gcc ${GCC_F} main.c -L . -lft
+
+delete:
+	rm -f *.o
 
 run: fclean all
 	gcc ${GCC_F} main.c -L . -lft
