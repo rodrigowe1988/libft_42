@@ -1,4 +1,18 @@
-#include "libft.h"
+//#include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+void	*ft_memchr(const void *s, int c, size_t n);
+
+int	main(void)
+{
+	printf("Teste de ft_memchr(): \n");
+	if (memchr("source", 'r', 2) == ft_memchr("source", 'r', 2))
+		printf("OK\n");
+	else
+		printf("Failed\n");
+}
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

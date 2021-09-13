@@ -1,15 +1,36 @@
-#include "libft.h"
+//#include "libft.h"
 #include <stdio.h>
+
+int	ft_isdigit(int c);
+static int	ft_isnotdigit(int c);
+int	ft_atoi(const char *str);
+
+int	main(void)
+{
+	printf("%d", ft_atoi("65\n"));
+	printf("\n");
+	printf("%d", ft_atoi("333\n"));
+	printf("\n");
+	printf("%d", ft_atoi("\n\t42"));
+}
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}
 
 static int	ft_isnotdigit(int c)
 {
-	if ((c == ' ' || c == '\n' || c == '\t' || c == '\r' \
-	|| c == '\f' || c == '\v'))
+	if (c == ' ' || c == '\n' || c == '\t' || c == '\r' \
+	|| c == '\f' || c == '\v')
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	num;
 	int	sign;
@@ -31,9 +52,4 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	return (num);
-}
-
-int	main(void)
-{
-	printf("%d", ft_atoi("65"));
 }

@@ -1,6 +1,18 @@
-#include "libft.h"
+//#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
+char			*ft_itoa(int n);
 static void		get_nbr_str(char *str, int n, size_t size);
+
+int main(void)
+{
+	printf("0: %s\n", ft_itoa(0));
+	printf("1: %s\n", ft_itoa(1));
+	printf("-1: %s\n", ft_itoa(-1));
+	printf("-543: %s\n", ft_itoa(-543));
+	printf("573: %s\n", ft_itoa(573));
+}
 
 char	*ft_itoa(int n)
 {
@@ -33,6 +45,14 @@ static void		get_nbr_str(char *str, int n, size_t size)
 		while (size--)
 		{
 			str[size] = (n % 10) + '0';
+			n /= 10;
+		}
+	}
+	else
+	{
+		while (--size)
+		{
+			str[size] = (n % 10) * -1 + '0';
 			n /= 10;
 		}
 		str[size] = '-';
