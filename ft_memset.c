@@ -1,16 +1,30 @@
-#include "libft.h"
 
-void	*ft_memset(void *ptr, int c, size_t n)
+#include <stddef.h>
+
+void	*ft_memset(void *ptr, int c, size_t n);
+
+int		main(void)
+{
+	char	str[30];
+
+	strcpy(str, "This is string.h function");
+	puts(str);
+
+	ft_memset(str, '0', 7);
+	puts(str);
+
+	return (0);
+}
+
+void	*ft_memset(void *ptr, int c, size_t len)
 {
 	char	*str;
-	size_t	count;
 
 	str = (char *)ptr;
-	count = 0;
-	while (count < n)
+	while (len > 0)
 	{
-		str[count] = (unsigned char)c;
-		count++;
+		str[len - 1] = c;
+		len--;
 	}
 	return (ptr);
 }

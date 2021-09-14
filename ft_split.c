@@ -1,7 +1,27 @@
-#include "libft.h"
-
+//#include "libft.h"
 #include <stdio.h>
 #include <string.h>
+
+static size_t	ft_countdown(const char *s, char c);
+static size_t	get_wordlen(const char *s, char c);
+static void 	*freesplit(char	**tab, size_t stop);
+static char		*worddup(const char *s, size_t len);
+char	**ft_split(const char *s, char c);
+
+int	main(void)
+{
+	int 	i;
+	char	**res;
+
+	printf("Chaine s : 'bonjour a tous', separateur c : ' ', resultat : \n");
+	res = ft_split("bonjour a tous", ' ');
+	i = 0;
+	while (res[i])
+	{
+		printf("'%s\n", res[i]);
+		i++;
+	}
+}
 
 static size_t	ft_countdown(const char *s, char c)
 {
