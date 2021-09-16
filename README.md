@@ -29,7 +29,7 @@ https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 |ft_strlcpy()| Essa função copia strings, sendo mais segura e mais consistente que a função strncpy. Ela pega o tamanho total do buffer (não somente a largura).|
 |ft_strlen()| Essa função devolve a quantidade de caracteres da string.|
 |ft_strncmp()| Essa função compara duas strings, retornando um inteiro da comparação(0 - se forem iguais, nº negativo se s1 menor que s2, nº positivo se s1 maior que s2.|
-|ft_strnstr()| Essa função localiza a primeira ocorrência de caractere nulo de uma string pequena numa grande..|
+|ft_strnstr()| Essa função localiza a primeira ocorrência de caractere nulo de uma string pequena numa grande.|
 |ft_strrchr()| Essa função percorre uma string em busca de um caractere, retornando a última ocorrência.|
 |ft_tolower()| Essa função transforma o caractere maiúsculo em minúsculo.|
 |ft_toupper()| Essa função transforma em maiúsculo o caractere minúsculo.|
