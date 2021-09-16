@@ -50,10 +50,12 @@ https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 |ft_itoa()|Aloca (com malloc(3)) e retorna uma ***string*** representando o inteiro recebido como argumento. Números negativos precisam ser manipulados.|
 |ft_strmapi()|Aplica a função ***f*** para cada caracter da ***string s*** para criar uma nova string (com malloc(3)) resultado de sucessivas aplicações de ***f***.|
 |ft_striteri()|Aplica a função ***f*** para cada caractere da ***string*** passada como argumento e passa o índice como um primeiro argumento. Cada caracter é passado por endereço para ***f*** para ser modificado se necessário.|
-|ft_putchar_fd()|retorna o ***caracter 'c'*** para o file descriptor*.|
-|ft_putstr_fd()|retorna a ***string 's'*** para o file descriptor*.|
-|ft_putendl_fd()|retorna a ***string 's"*** para o file descriptor*, seguido por uma linha nova.|
-|ft_putnbr_fd()||
+|ft_putchar_fd()|tem como saída o ***caracter 'c'*** para o file descriptor*.|
+|ft_putstr_fd()|tem como saída a ***string 's'*** para o file descriptor*.|
+|ft_putendl_fd()|tem como saída a ***string 's"*** para o file descriptor*, seguido por uma linha nova.|
+|ft_putnbr_fd()|tem como saída o inteiro ***'n'*** para o file descriptor*.|
 
 
-*file descriptor: 
+*file descriptor: Em palavras simples, quando você abre um arquivo, o sistema operacional cria uma entrada para representar esse arquivo e armazena as informações sobre esse arquivo aberto. Portanto, se houver 100 arquivos abertos no seu sistema operacional, haverá 100 entradas no sistema operacional (em algum lugar do kernel). Essas entradas são representadas por números inteiros como (... 100, 101, 102 ....). Este número de entrada é o descritor de arquivo. Portanto, é apenas um número inteiro que representa exclusivamente um arquivo aberto no sistema operacional. Se seu processo abrir 10 arquivos, sua tabela Process terá 10 entradas para descritores de arquivos.
+
+Da mesma forma, quando você abre um soquete de rede, ele também é representado por um número inteiro e é chamado de Descritor de Soquete. 
