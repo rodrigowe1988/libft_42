@@ -1,4 +1,4 @@
-<img src="https://i0.wp.com/idocode.com.br/blog/wp-content/uploads/2020/04/aprender-programar-linguagem-c.jpg?resize=800%2C500&ssl=1">
+<img src="https://terminalroot.com.br/assets/img/c/clang.jpg">
 
 # libft_42
 ## Minha primeira biblioteca em C - 42 School SP
