@@ -12,34 +12,30 @@
 
 #include "libft.h"
 
-static int	ft_isnotdigit(int c)
+int	ft_atoi(const char *dest)
 {
-	if ((c == ' ' || c == '\n' || c == '\t' || c == '\r' \
-	|| c == '\f' || c == '\v'))
-		return (1);
-	return (0);
-}
-
-int	ft_atoi(const char *str)
-{
-	int	num;
 	int	sign;
+	int	num;
+	int	a;
 
-	while ((ft_isnotdigit(*str)))
-		str++;
+	a = 0;
+	if (*dest == 0)
+		return (0);
+	while (dest[a] == ' ' || (dest[a] >= 9 && dest[a] <= 13))
+		a++;
 	sign = 1;
-	if (*str == '+' || *str == '-')
+	if (dest[a] == '+' || dest[a] == '-')
 	{
-		if (*str == '-')
-			sign = -1;
-		str++;
+		if (dest[a] == '-')
+			sign = -sign;
+		a++;
 	}
 	num = 0;
-	while ((ft_isdigit(*str)))
+	while (dest[a] <= '9' && dest[a] >= '0')
 	{
 		num *= 10;
-		num += sign * (*str - '0');
-		str++;
+		num = num + dest[a] - 48;
+		a++;
 	}
-	return (num);
+	return (num * sign);
 }
