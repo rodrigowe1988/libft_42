@@ -45,4 +45,5 @@ https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 |:-------|:---------|
 |ft_substr()|Aloca (com malloc(3)) e retorna uma substring da ***string 's'***. A substring começa no índice ***'start'*** e é de tamanho máximo ***'len'.***|
 |ft_strjoin()|Aloca (com malloc(3)) e retorna uma nova ***string***, que é o resultado da concatenação de ***s1*** e ***s2***.|
-
+|ft_strtrim()|Aloca (com malloc(3)) e retorna uma cópia de ***'s1'*** com os caracteres específicos em ***'set'*** removidos do início e do fim da ***string***.|
+|ft_split()|Aloca (com malloc(3)) e retorna um array de ***strings*** obtido por divisão(split) de ***'s'*** usando o caractere ***'c'*** como delimitador. O array precisa terminar por um ponteiro ***NULO***.|
