@@ -47,3 +47,7 @@ https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 |ft_strjoin()|Aloca (com malloc(3)) e retorna uma nova ***string***, que é o resultado da concatenação de ***s1*** e ***s2***.|
 |ft_strtrim()|Aloca (com malloc(3)) e retorna uma cópia de ***'s1'*** com os caracteres específicos em ***'set'*** removidos do início e do fim da ***string***.|
 |ft_split()|Aloca (com malloc(3)) e retorna um array de ***strings*** obtido por divisão(split) de ***'s'*** usando o caractere ***'c'*** como delimitador. O array precisa terminar por um ponteiro ***NULO***.|
+|ft_itoa()|Aloca (com malloc(3)) e retorna uma ***string*** representando o inteiro recebido como argumento. Números negativos precisam ser manipulados.|
+|ft_strmapi()|Aplica a função ***f*** para cada caracter da ***string s*** para criar uma nova string (com malloc(3)) resultado de sucessivas aplicações de ***f***.|
+|ft_striteri()|Aplica a função ***f*** para cada caractere da ***string*** passada como argumento e passa o índice como um primeiro argumento. Cada caracter é passado por endereço para ***f*** para ser modificado se necessário.|
+|ft_putchar_fd()||
