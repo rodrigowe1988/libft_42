@@ -1,37 +1,16 @@
-//#include "libft.h"
-#include<stdio.h>
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 11:55:23 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 11:55:24 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	*ft_memset(void *ptr, int c, size_t n);
-void	ft_bzero(void *str, size_t n);
-
-int	main(void)
-{
-	char any[8] = "Rodrigo";
-	int x;
-
-	x = 333333;
-	printf("Char var: %s", any);
-	printf("\nInt var: %d", x);
-	ft_bzero(&x, 1);
-	ft_bzero(any, 1);
-	printf("\n");
-	printf("%s", any);
-	printf("%d", x);
-}
-
-void	*ft_memset(void *ptr, int c, size_t n)
-{
-	char	*str;
-
-	str = (char *)ptr;
-	while (n > 0)
-	{
-		str[n - 1] = c;
-		n--;
-	}
-	return (ptr);
-}
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t n)
 {

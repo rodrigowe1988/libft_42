@@ -1,19 +1,20 @@
-//#include "libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 15:57:14 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 16:03:52 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_isalpha(int c);
-
-int main(void)
-{
-	printf("%d\n", ft_isalpha('c'));
-	printf("%d\n", ft_isalpha('3'));
-	printf("%d\n", ft_isalpha('%'));
-}
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

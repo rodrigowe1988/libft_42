@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 11:51:09 by roweber           #+#    #+#             */
-/*   Updated: 2021/09/15 11:51:10 by roweber          ###   ########.fr       */
+/*   Created: 2021/09/15 14:21:07 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 14:21:25 by roweber          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	if (s)
+	{
+		while (*s)
+			write(fd, s++, 1);
+	}
 }

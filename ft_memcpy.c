@@ -1,21 +1,16 @@
-//#include "libft.h"
-#include <stdio.h>
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 11:56:57 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 11:57:00 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
-int	main(void)
-{
-	char	s[10] = "aaaaa";
-	char	sbis[10] = "aaaaa";
-
-	printf("Teste de ft_memcpy():\n");
-	strcpy(sbis, s);
-	if (!strcmp(memcpy(s, "source", 3), ft_memcpy(sbis, "source", 3)) && !strcmp(memcpy(s, "2emesource", 8), ft_memcpy(sbis, "2emesource", 8)))
-		printf("OK\n");
-	else
-		printf("Failed: expected '%s', got '%s'.\n", s, sbis);
-}
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

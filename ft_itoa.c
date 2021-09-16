@@ -1,60 +1,57 @@
-//#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 13:42:20 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 13:42:20 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char			*ft_itoa(int n);
-static void		get_nbr_str(char *str, int n, size_t size);
+#include "libft.h"
 
-int main(void)
+static size_t	ft_count_size(long int n)
 {
-	printf("0: %s\n", ft_itoa(0));
-	printf("1: %s\n", ft_itoa(1));
-	printf("-1: %s\n", ft_itoa(-1));
-	printf("-543: %s\n", ft_itoa(-543));
-	printf("573: %s\n", ft_itoa(573));
+	if (n < 0)
+		return (1 + ft_count_size(-n));
+	if (n <= 9)
+		return (1);
+	else
+		return (1 + ft_count_size(n / 10));
+}
+
+static void	ft_populete_loop(char *new, int n, int size)
+{
+	if (n < 0)
+	{
+		new[0] = '-';
+		n *= -1;
+	}
+	if (n > 9)
+		ft_populete_loop(new, n / 10, size - 1);
+	new[size] = (n % 10) + 48;
 }
 
 char	*ft_itoa(int n)
 {
-	int		temp;
-	char	*num;
 	size_t	size;
+	char	*int_str;
+	int		flag;
 
-	if (n >= 0)
-		size = 1;
-	else
-		size = 2;
-	temp = n / 10;
-	while (temp)
+	flag = 0;
+	if (n <= INT_MIN)
 	{
-		size++;
-		temp /= 10;
+		n = -INT_MAX;
+		flag = 1;
 	}
-	num = malloc(size + 1);
-	if (num == NULL)
+	size = ft_count_size(n);
+	int_str = ft_calloc(size + 1, sizeof(char));
+	if (!int_str)
 		return (NULL);
-	get_nbr_str(num, n, size);
-	return (num);
-}
-
-static void		get_nbr_str(char *str, int n, size_t size)
-{
-	str[size] = '\0';
-	if (n >= 0)
-	{
-		while (size--)
-		{
-			str[size] = (n % 10) + '0';
-			n /= 10;
-		}
-	}
-	else
-	{
-		while (--size)
-		{
-			str[size] = (n % 10) * -1 + '0';
-			n /= 10;
-		}
-		str[size] = '-';
-	}
+	ft_populete_loop(int_str, n, --size);
+	if (flag == 1)
+		int_str[size] += flag;
+	return (int_str);
 }

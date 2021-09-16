@@ -1,31 +1,20 @@
-//#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 13:26:00 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 13:26:00 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static size_t	ft_countdown(const char *s, char c);
-static size_t	get_wordlen(const char *s, char c);
-static void 	*freesplit(char	**tab, size_t stop);
-static char		*worddup(const char *s, size_t len);
-char	**ft_split(const char *s, char c);
-
-int	main(void)
-{
-	int 	i;
-	char	**res;
-
-	printf("Chaine s : 'bonjour a tous', separateur c : ' ', resultat : \n");
-	res = ft_split("bonjour a tous", ' ');
-	i = 0;
-	while (res[i])
-	{
-		printf("'%s\n", res[i]);
-		i++;
-	}
-}
+#include "libft.h"
 
 static size_t	ft_countdown(const char *s, char c)
 {
-	int 	is_word;
+	int		is_word;
 	size_t	words;
 
 	words = 0;
@@ -54,7 +43,7 @@ static size_t	get_wordlen(const char *s, char c)
 	return (offset++);
 }
 
-static char		*worddup(const char *s, size_t len)
+static char	*worddup(const char *s, size_t len)
 {
 	char	*str;
 	size_t	offset;
@@ -72,7 +61,7 @@ static char		*worddup(const char *s, size_t len)
 	return (str);
 }
 
-static void 	*freesplit(char	**tab, size_t stop)
+static void	*freesplit(char	**tab, size_t stop)
 {
 	size_t	counter;
 
@@ -93,8 +82,8 @@ char	**ft_split(const char *s, char c)
 	if (s == NULL)
 		return (NULL);
 	words = ft_countdown(s, c);
-	tab = malloc((words + 1) * sizeof(char*));
-	if (tab ==  NULL)
+	tab = malloc((words + 1) * sizeof(char *));
+	if (tab == NULL)
 		return (NULL);
 	counter = 0;
 	while (counter < words)
@@ -102,7 +91,7 @@ char	**ft_split(const char *s, char c)
 		len = get_wordlen(s, c);
 		if (len)
 		{
-			tab[counter] =  worddup(s, len);
+			tab[counter] = worddup(s, len);
 			if (tab[counter++] == NULL)
 				return (freesplit(tab, counter - 1));
 		}

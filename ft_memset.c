@@ -1,30 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 11:51:34 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 11:51:35 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int c, size_t n);
-
-int		main(void)
-{
-	char	str[30];
-
-	strcpy(str, "This is string.h function");
-	puts(str);
-
-	ft_memset(str, '0', 7);
-	puts(str);
-
-	return (0);
-}
-
-void	*ft_memset(void *ptr, int c, size_t len)
+void	*ft_memset(void *ptr, int c, size_t n)
 {
 	char	*str;
+	size_t	count;
 
 	str = (char *)ptr;
-	while (len > 0)
+	count = 0;
+	while (count < n)
 	{
-		str[len - 1] = c;
-		len--;
+		str[count] = (unsigned char)c;
+		count++;
 	}
 	return (ptr);
 }

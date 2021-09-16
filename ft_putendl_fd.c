@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 11:51:09 by roweber           #+#    #+#             */
-/*   Updated: 2021/09/15 11:51:10 by roweber          ###   ########.fr       */
+/*   Created: 2021/09/15 14:23:54 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 14:24:13 by roweber          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

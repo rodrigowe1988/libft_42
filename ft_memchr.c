@@ -1,18 +1,16 @@
-//#include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 12:36:09 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 12:36:09 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, size_t n);
-
-int	main(void)
-{
-	printf("Teste de ft_memchr(): \n");
-	if (memchr("source", 'r', 2) == ft_memchr("source", 'r', 2))
-		printf("OK\n");
-	else
-		printf("Failed\n");
-}
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

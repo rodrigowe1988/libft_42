@@ -1,19 +1,20 @@
-//#include "libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/15 11:28:14 by roweber           #+#    #+#             */
+/*   Updated: 2021/09/15 11:28:15 by roweber          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_isalnum(int c);
-
-int main(void)
-{
-	printf("%d\n", ft_isalnum('R'));
-	printf("%d\n", ft_isalnum('3'));
-	printf("%d\n", ft_isalnum('.'));
-}
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || \
-	(c >= 'a' && c <= 'z'))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);
