@@ -43,8 +43,6 @@ https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 ### Funções adicionais:
 |Função()| Descrição|
 |:-------|:---------|
-|ft_substr()|AlocarAloca (com malloc (3)) e retorna uma substring
-da ***string 's'***.
-A substring começa no índice 'start' e é de
-tamanho máximo 'len'.|
+|ft_substr()|Aloca (com malloc(3)) e retorna uma substring da ***string 's'***. A substring começa no índice ***'start'*** e é de tamanho máximo ***'len'.***|
+|ft_strjoin()|Aloca (com malloc(3)) e retorna uma nova ***string***, que é o resultado da concatenação de ***s1*** e ***s2***.|
 
