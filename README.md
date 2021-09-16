@@ -1,3 +1,5 @@
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fidocode.com.br%2Fblog%2Fprogramacao%2Faprenda-programar-linguagem-c%2F&psig=AOvVaw2UvAYewHFbMetVzaobj059&ust=1631874164007000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLju35Kjg_MCFQAAAAAdAAAAABAD">
+
 # libft_42
 ## Minha primeira biblioteca em C - 42 School SP
 
