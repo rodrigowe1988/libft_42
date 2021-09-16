@@ -6,7 +6,7 @@
 /*   By: roweber <roweber@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:56:57 by roweber           #+#    #+#             */
-/*   Updated: 2021/09/15 11:57:00 by roweber          ###   ########.fr       */
+/*   Updated: 2021/09/16 09:12:52 by roweber          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*d;
 	char	*s;
 
+	if (dest == NULL && src == NULL && n)
+		return (dest);
 	i = 0;
 	d = (char *)dest;
 	s = (char *)src;
