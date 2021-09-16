@@ -1,10 +1,16 @@
 # libft_42
 ## Minha primeira biblioteca em C - 42 School SP
 
+###Teste utilizado para a libft 
+https://github.com/Tripouille/libftTester
+
+###Notion com as funções explicadas com mais detalhes e exemplos de aplicação
+https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
+
 ### Parte 1 - Funções básicas
 |Função()| Descrição|
 |:-------|:---------|
-|ft_atoi()| Essa função converte um caractere que possui um número em int.|
+|ft_atoi()| Essa função converte para int um caractere que possui um número.|
 |ft_bzero()| Essa função atribui um byte nulo (\0) a um ponto da memória, ou seja, zera a posição da memória.|
 |ft_isalnum()| Essa função utiliza as funções ft_isalpha() e ft is_digit() e verifica se o valor é um caractere do alfabeto ou um número entre 0 e 9.|
 |ft_isalpha()| Essa função verifica se o valor está entre os caracteres do alfabeto, tanto em maiúsculo, quanto em minúsculo.|
@@ -23,6 +29,14 @@
 |ft_strncmp()| Essa função compara duas strings, retornando um inteiro da comparação(0 - se forem iguais, nº negativo se s1 menor que s2, nº positivo se s1 maior que s2.|
 |ft_strnstr()| Essa função localiza a primeira ocorrência de caractere nulo de uma string pequena numa grande..|
 |ft_strrchr()| Essa função percorre uma string em busca de um caractere, retornando a última ocorrência.|
+|ft_tolower()| Essa função transforma o caractere maiúsculo em minúsculo.|
+|ft_toupper()| Essa função transforma em maiúsculo o caractere minúsculo.|
+
+Funções que usam a função malloc():
+|:-------|:---------|
+|calloc()|Alocação de memória|
+|strdup()|Ponteiro para uma nova string que é uma duplicata da string s|
+
 
 
 
