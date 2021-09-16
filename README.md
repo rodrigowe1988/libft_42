@@ -1,10 +1,10 @@
 # libft_42
 ## Minha primeira biblioteca em C - 42 School SP
 
-###Teste utilizado para a libft 
+### Teste utilizado para a libft 
 https://github.com/Tripouille/libftTester
 
-###Notion com as funções explicadas com mais detalhes e exemplos de aplicação
+### Notion com as funções explicadas com mais detalhes e exemplos de aplicação
 https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 
 ### Parte 1 - Funções básicas
@@ -32,7 +32,8 @@ https://www.notion.so/Libft-e62488460aaf426db45f52ab1fa71f9c
 |ft_tolower()| Essa função transforma o caractere maiúsculo em minúsculo.|
 |ft_toupper()| Essa função transforma em maiúsculo o caractere minúsculo.|
 
-Funções que usam a função malloc():
+### Funções que usam a função malloc():
+|Função()| Descrição|
 |:-------|:---------|
 |calloc()|Alocação de memória|
 |strdup()|Ponteiro para uma nova string que é uma duplicata da string s|
