@@ -55,13 +55,13 @@ all: $(NAME)
 ${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
-${OBJS}: ${SRCS}
-	clang -I . ${GCC_F} -c ${SRCS}
+.c.o: ${SRCS}
+	clang -I . ${GCC_F} -c $< -o $(<:.c=.o)
 
 clean:
 	rm -f ${OBJS}
 
-fclean:
+fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
