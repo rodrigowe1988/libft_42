@@ -9,7 +9,7 @@
 /*   Updated: 2021/09/15 13:21:06 by roweber          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//asfdsafdsaf
+
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
